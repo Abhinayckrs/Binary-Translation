@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "build",
+        "command": "/usr/bin/g++",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "loader_main.C",
+          "loader.C",
+          "-o",
+          "loader_executable",
+          "-lbfd"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}/Loader"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "detail": "Task to build loader_executable from loader_main.C and loader.C"
+      }
+    ]
+  }
